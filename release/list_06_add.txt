@@ -1,0 +1,21 @@
+24_vanocniDenEBU_256cro3_61 OneTime_2024-12-15;10:00 OneTime_2024-12-15;15:00 OneTime_2024-12-15;20:00 OneTime_2024-12-15;21:00
+//  25_1000hlasuAdventu_256ddur_77 Sunday_16:00
+
+28_adHoc_256cro3_30 OneTime_2024-12-25;18:33
+
+30_zvony24_256cro3_06 OneTime_2024-12-24;12:00
+31_stariMistri24_256cro3_62 OneTime_2024-12-24;14:00
+32_KoledovaniSVltavou_128cro3_140 OneTime_2024-12-24;16:10
+33_hraACDoyleModryKorund_128cro3_47 OneTime_2024-12-24;20:00
+34_HafslundsoySangkor_256cro3_44 OneTime_2024-12-24;20:45
+35_VanocniPreludiaVRihovsky_256cro3_33 OneTime_2024-12-24;21:27
+36_HejMistre_256cro3_61 OneTime_2024-12-24;22:00
+37_poled24dDur_256ddur_75 OneTime_2024-12-24;12:20
+
+38_stariMistri_256cro3_61 OneTime_2024-12-26;14:00
+39_vanocniDenEbu_256cro3_47 OneTime_2024-12-26;16:13
+40_vanocniDenEbuAbelSelaocoeBBCSingers_256cro3_61 OneTime_2024-12-26;17:00
+
+41_hraVosto5Proton_256cro3_85 OneTime_2024-12-31;20:00
+42_koncert_256cro3_96 OneTime_2024-12-31;21:24
+42_hudSilvestrOndrejCihlar_256cro3_155 OneTime_2024-12-31;23:30
