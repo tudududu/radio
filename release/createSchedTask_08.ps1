@@ -3,6 +3,13 @@
 # script name schema: 04_test04_128cro3_01
 # ---------------------------------------------------------09
 
+# Use elevated execution
+if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Warning "Script requires administrative privileges. Restarting with elevation..."
+    Start-Process PowerShell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+
 # Define the task name and action
 $taskPath = "radioVLCp"
 $username = "DESKTOP-NJGU9I1\Jan"
