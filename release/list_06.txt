@@ -1,1 +1,1 @@
-00_bud_32cro3_03 Monday,Tuesday,Wednesday,Thursday,Friday,Saturday_7:58:15 Monday,Tuesday,Wednesday,Thursday,Friday,Saturday_12:02:15 Monday,Tuesday,Wednesday,Thursday,Friday_05:58:30 Daily_10:57:15 Daily_13:58:15 Daily_14:58:15 Daily_15:58:15 Daily_17:57:15 Daily_18:57:15 Monday_21:57:15 Sunday_09:57:14
+28_adHoc_256cro3_30 OneTime_2024-12-25;18:33

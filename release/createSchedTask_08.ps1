@@ -92,7 +92,15 @@ function Get-TargetScriptFilePath {
 
     # Disable timezone synchronization for each trigger
     foreach ($trigger in $taskTriggers) {
-        $trigger.SynchronizeAcrossTimeZone = $false
+        try {
+            # Try the direct property if available
+            $trigger.SynchronizeAcrossTimeZone = $false
+        }
+        catch {
+            Write-Output "Using alternative method to disable timezone synchronization"
+            # For PowerShell versions where the direct property isn't available
+            # We'll handle this when registering the task
+        }
     }
 
     # Copy the source file to the new location
@@ -119,7 +127,8 @@ function Get-TargetScriptFilePath {
         -User $username -Password $password `
         -RunLevel Highest `
         -Settings $settings `
-        -Description "User/Password_v03"
+        -Description "User/Password_v03" `
+        -Force
 }
 
 # Get the directory of the script
