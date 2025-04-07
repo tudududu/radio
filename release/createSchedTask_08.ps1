@@ -90,6 +90,11 @@ function Get-TargetScriptFilePath {
         }
     }
 
+    # Disable timezone synchronization for each trigger
+    foreach ($trigger in $taskTriggers) {
+        $trigger.SynchronizeAcrossTimeZone = $false
+    }
+
     # Copy the source file to the new location
     Copy-Item -Path $sourceFilePath -Destination $filePath
 
