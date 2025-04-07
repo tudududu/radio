@@ -71,7 +71,9 @@ if (-Not (Test-Path -Path $cesta)) {
 }
 # converting $durMinute to an integer
 $durSec = [int]$durMinute * 60
-# $recFileName=$titleRec + "_" + $shortDateTime + ".ogg"
+
+# Creating the file name
+# $recFileName=$titleRec + "_" + $station + ".m4a" # bud
 $recFileName=$titleRec + "_" + $station + "_" + $shortDateTime + ".ogg"
 
 # In powershell I wanto meake a conditional expression. 
