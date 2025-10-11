@@ -11,9 +11,23 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 }
 
 # Define the task name and action
-$taskPath = "radioVLCp"
-$username = "DESKTOP-NJGU9I1\Jan"
-$password = "=8RMeY\QOsc-FDP0~8.+"
+$taskPath = "\radioVLCp\"          # Task folder path must start/end with '\'
+$username = "$env:COMPUTERNAME\Jan"  # Use DOMAIN\User or .\User (not a '/')
+# Avoid hardcoding passwords; prompt at runtime if not provided
+if (-not $password) {
+    $securePwd = Read-Host -Prompt "Password for $username" -AsSecureString
+    $password = [Runtime.InteropServices.Marshal]::PtrToStringUni(
+        [Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePwd)
+    )
+}
+# Validate the account resolves to a SID before registering the task
+try {
+    [void]([System.Security.Principal.NTAccount]$username).Translate(
+        [System.Security.Principal.SecurityIdentifier]
+    )
+} catch {
+    throw "User '$username' not found. Use '.\User' for local accounts or 'DOMAIN\User'."
+}
 # $taskName = "00_test03_01"  # $targetScriptName
 # $scriptPath = "c:\Users\Jan\Dropbox\doc\rec\radio\scheVLC\"
 # $scriptPath = $MyInvocation.MyCommand.Path
